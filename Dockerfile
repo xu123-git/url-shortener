@@ -1,4 +1,4 @@
-FROM golang:1.20.0
+FROM golang:1.20
 COPY . .
 RUN go mod download
 RUN build -o main
