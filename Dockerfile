@@ -1,6 +1,7 @@
 FROM golang:1.20
+COPY go.mod .
+COPY go.sum .
 COPY . .
-ENV GOPROXY=goproxy.cn 
 RUN go mod download
 RUN go build -o main
 EXPOSE 80:8080
